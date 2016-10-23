@@ -1,0 +1,580 @@
+body, html {
+    font-family: $title-font;
+    height: 100%;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.fade-in {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration: 0.4s;
+    -moz-animation-duration: 0.4s;
+    animation-duration: 0.4s;
+}
+
+.fade-in-slow {
+    opacity:0;  /* make things invisible upon start */
+    -webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+    -moz-animation:fadeIn ease-in 1;
+    animation:fadeIn ease-in 1;
+
+    -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+
+    -webkit-animation-duration: 1.5s;
+    -moz-animation-duration: 1.5s;
+    animation-duration: 1.5s;
+}
+
+.slow {
+    animation-delay: 0.3s;
+}
+
+.slow-2 {
+    animation-delay: 0.4s;
+}
+
+.slow-3 {
+    animation-delay: 0.5s;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+// LOGO HEADER ----------------------
+
+.logo-wrapper {
+    // height: 275px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.8);
+    // background-color: black;
+    position: relative;
+    top: 0;
+    z-index: -2;
+    // img {
+    //     position: absolute;
+    //     width: 100px;
+    //     min-width: 120px;
+    //     margin: auto;
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    // }
+    .e-logo {
+        font-family: 'Monoton';
+        font-size: 250px;
+        color: #fff;
+        position: relative;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+    }
+}
+
+
+
+.bg-image {
+    background: url(../images/endgrain-shop-b&w.jpg); 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    // background-color: $dark-gray;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: -2;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    float: left;
+    clear: left;
+    padding: 0px 0;
+}
+
+.bg-image-relative {
+    position: relative !important;
+}
+
+// PAGE TITLE ----------------------
+
+.title {
+    position: relative;
+    float: left;
+    width: 100%;
+    height: 125px;
+    background-color: white;
+    h1 {
+        text-align: center;
+        width: 100%;
+        font-size: 22px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        margin: 0;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        a {
+            position: relative;
+            top: 4px;
+            text-decoration: none;
+            color: black;
+        } 
+    }
+}
+
+.title-fixed {
+    position: relative;
+    top: 0 !important;
+    z-index: 101;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    height: 60px;
+    a {
+        transition: all 0.5s ease-in-out;
+    }
+}
+
+.title-opacity {
+    opacity: 0.95;
+}
+
+// .skip-fix-title {
+//     height: 107px;
+// }
+
+// NAV BAR -------------------------
+
+.nav {
+    position: relative;
+    width: 100%;
+    float: left;
+    height: 55px;
+    background-color: $nav-back;
+    ul {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    li {
+        display: inline;
+        margin: 0 15px;
+        a {
+            font-family: $nav-font;
+            color: $gold;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 12px;
+            font-weight: 500;
+            transition: all .2s ease-in-out;
+        }      
+    }
+}
+
+.nav-fixed {
+    position: relative;
+    top: 60px !important;
+    z-index: 100;
+    position: fixed;
+    width: 100%;
+}
+
+.skip-fix-nav {
+    height: 0px;
+}
+
+
+// PRODUCTS SECTION -------------------
+
+.products {
+    display: block;
+    text-align: center;
+    padding-top: 100px;
+    margin-top: -100px;
+    background-color: #fff;
+    img {
+        margin-top: 15px;
+        width: 90%;
+        opacity: 1;
+        transition: all 0.6s ease-in-out;
+        // height: 165px;
+    }
+    img:hover {
+        opacity: 0.85;
+    }
+}
+
+#p-link {
+    padding-top: 100px;
+    margin-top: -100px;
+}
+
+figure { 
+    display: block; 
+    position: relative; 
+    overflow: hidden; 
+    
+    margin: 0 auto;
+}
+
+figcaption {
+    font-family: $caption-font; 
+    font-weight: 400;
+    letter-spacing: 2px;
+    word-spacing: 4px;
+    position: absolute; 
+    // background: rgba(0,0,0,0); 
+    color: gray; 
+    // padding: 10px 20px; 
+    font-size: 16px;
+    // text-transform: uppercase;
+    opacity: 0;
+     
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+
+    background: rgba(255,255,255,.7);
+    padding: 0px 10px;
+    margin: 39px 9px 9px 9px;
+}
+
+.description {
+    // margin-top: 30px;
+    left: -30%; 
+    top: 0;
+}
+
+.price { 
+    color: $gold;
+    bottom: 0;
+    right: -30%;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+}
+
+.text-bkgd {
+    background: rgba(255,255,255,.7);
+    padding: 0px 10px;
+    margin: 39px 9px 9px 9px;
+    // border-radius: 3px;
+}
+
+figure:hover .description {
+    opacity: 1;
+    left: 0;
+}
+
+figure:hover .price {
+    opacity: 1;
+    right: 0px;
+}
+
+// STORY SECTION ---------------------
+
+h2 {
+    font-family: $subtitle-font;
+}
+
+.story {
+    background-color: #fff;
+    h2 {
+        position: relative;
+        width: 100%;
+        color: black;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 50px 0 20px 0;
+    }
+    p {
+        font-family: $p-font;
+        color: black;
+        font-size: 14px;
+        line-height: 27px;
+        margin-bottom: 50px;
+    }
+}
+
+#s-link {
+    padding-top: 70px;
+    margin-top: -70px;
+}    
+
+
+// CONTACT SECTION -------------------
+
+.contact {
+    background-color: #fff;
+}
+
+.contact-icons {
+    height: 35px;
+    width: 35px;
+    fill: #a1a1a1;
+    display: inline;
+    margin: 0;
+    // padding: 10px; 
+    img {
+        cursor: pointer;
+        width: 40px;
+        margin: 20px 10px 0;
+        opacity: 0.6;
+        transition: all 0.3s ease-in-out;
+    }
+    img:first-child {
+        margin-left: 0;
+    }
+    img:hover {
+        opacity: 1;
+    }
+}
+
+
+
+.icon-mail {
+    
+    &:hover {
+        background-color: red;
+    }
+}
+
+.icon-mail:hover {
+    fill: red;
+}
+
+.contact {
+    height: 200px;
+    text-align: center;
+    h2 {
+        position: relative;
+        width: 100%;
+        color: black;
+        font-size: 20px;
+        text-transform: uppercase;
+        text-align: center;
+        margin: 50px 0 10px 0;
+    }
+    a, li {
+        font-size: 14px;
+        line-height: 28px;
+    }
+
+    .contact-link {
+            margin: 0 -10px;
+            a {
+                color: $gold;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+            }
+            a:visited {
+                color: $gold;
+                text-decoration: none;
+            }
+            .black:hover {
+                color: black;
+                text-decoration: none;
+            }
+    } 
+
+    .contact-item {
+        padding: 0;
+    }    
+}
+
+       
+
+#c-link {
+    padding-top: 91px;
+    margin-top: -91px;
+}    
+
+
+// FOOTER SECTION ----------------------
+
+footer {
+    font-family: $p-font;
+    background-color: $nav-back;
+    height: 100px;
+    position: relative;
+    z-index: 200;
+    ul {
+        text-align: center;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+        li {
+            margin-top: 20px;
+            a {
+                font-family: "yeseva one", sans-serif;
+                text-transform: uppercase;
+                color: black;
+                font-size: 50px;
+                letter-spacing: 2px;
+                font-weight: 500;
+                text-decoration: none;
+                transition: all 0.2s ease-in-out;
+                &:hover {
+                    color: $gold;
+                }
+                a:visited {
+                    text-decoration: none;
+                    color: black;
+                }
+            }
+        }   
+    }
+    .copyright {
+        background-color: $nav-back;
+        color: black;
+        text-align: center;
+        font-size: 12px;
+        padding-bottom: 10px;
+        letter-spacing: 1px;
+        font-weight: 400;
+    }    
+}
+
+// HOVER CLASSES ----------------------
+
+a:hover, a:focus {
+    color: black;
+    text-decoration: none;
+}
+
+// MEDIA QUERIES -------------------------------------
+
+// SMALL TABLET ----------------------------
+@media screen and (min-width: 350px) {
+    .logo-wrapper img {
+        width: 40%;
+    }
+
+    .e-logo {
+        font-size: 300px !important;
+    }
+}
+
+// SMALL TABLET ----------------------------
+@media screen and (min-width: 480px) {
+    .title h1 a {
+        // color: red;
+        font-size: 30px;
+    }
+}
+
+// LARGE TABLET --------------------------------
+@media screen and (min-width: 768px) {
+    .title h1 a {
+        // color: black;
+        font-size: 35px;
+    }
+    .title {
+        height: 125px;
+    }
+    .nav {
+        height: 55px;
+        li a {
+            margin: 0 16px;
+            font-size: 14px;
+        }
+        .black:hover {
+            color: black;
+            text-decoration: none;
+        }
+    }
+    // .logo-wrapper img {
+    //     width: 200px;
+    //     max-width: 220px;
+    // }
+    .story {
+        h2 {
+            text-align: left;
+            margin: 150px 0 20px 0;
+            font-size: 22px;
+        }
+        p {
+            font-size: 18px;
+            line-height: 32px;
+        }
+    }
+    .contact {
+        text-align: left;
+        h2 {
+            text-align: left;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+    }
+    .products {
+        img {
+            width: 600px;
+            margin-top: 30px;
+        //     opacity: 1.0;
+        //     transition: all 0.2s ease-in-out;
+        // }
+        // img:hover {
+        //     opacity: 0.825;
+        //     transition: all 0.2s ease-in-out;
+        }
+        figure {
+            width: 600px;
+        }
+    }
+}
+
+// SMALL LAPTOP/DESKTOP -----------------------
+@media screen and (min-width: 992px) {
+    .logo-wrapper img {
+        width: 200px;
+    }
+    .title h1 a {
+        // color: yellow;
+    }
+    .story {
+        padding: 0 200px;
+    }
+    .contact {
+        padding: 0 200px;
+    }
+}    
+
+// MEDIUM LAPTOP/DESKTOP ----------------------
+@media screen and (min-width: 1200px) {
+    .title h1 a {
+        // color: green;
+    }
+    .container {
+        max-width: 1050px;
+    }
+}       
+
+// LARGE LAPTOP/DESKTOP -----------------------
+@media screen and (min-width: 1400px) {
+    .title h1 a {
+        // color: blue;
+    }
+}      
