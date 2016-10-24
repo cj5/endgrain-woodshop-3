@@ -79,7 +79,7 @@ li {
     // }
     .e-logo {
         font-family: 'Monoton';
-        font-size: 250px;
+        font-size: 200px;
         color: #fff;
         position: relative;
         text-align: center;
@@ -93,7 +93,7 @@ li {
 
 
 .bg-image {
-    background: url(../images/endgrain-shop-b&w.jpg); 
+    background: url(../images/shop.jpg);  
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -474,7 +474,7 @@ a:hover, a:focus {
     }
 
     .e-logo {
-        font-size: 300px !important;
+        font-size: 250px !important;
     }
 }
 
@@ -483,6 +483,10 @@ a:hover, a:focus {
     .title h1 a {
         // color: red;
         font-size: 30px;
+    }
+
+    .e-logo {
+        font-size: 300px !important;
     }
 }
 
