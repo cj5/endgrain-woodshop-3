@@ -69,8 +69,8 @@ $(document).ready(function () {
     if ($(window).scrollTop() > theHeight) {
         $('.nav').addClass('nav-fixed');
         $('.title').addClass('title-fixed');
-        $('.title').stop().animate({height: "60px"}, 80);
-        $('.nav').stop().animate({height: "40px"}, 80);
+        $('.title').stop().animate({height: '60px'}, 80);
+        $('.nav').stop().animate({height: '40px'}, 80);
         $('.bg-image').addClass('relative');
     }
     if ($(window).scrollTop() < theHeight - 1) {
@@ -78,8 +78,8 @@ $(document).ready(function () {
         // $('.nav').css('top', theHeight - 180);
         $('.nav').removeClass('nav-fixed');
         $('.title').removeClass('title-fixed');
-        $('.title').stop().animate({height: "125px"}, 80);
-        $('.nav').stop().animate({height: "55px"}, 80);
+        $('.title').stop().animate({height: '125px'}, 80);
+        $('.nav').stop().animate({height: '55px'}, 80);
         $('.bg-image').addClass('relative');
     }
     if ($(window).scrollTop() > theHeight + 100) { 

@@ -293,6 +293,11 @@ figure:hover .price {
     right: 0px;
 }
 
+.content-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
 // STORY SECTION ---------------------
 
 h2 {
@@ -300,7 +305,7 @@ h2 {
 }
 
 .story {
-    background-color: #fff;
+    background-color: #fff;    
     h2 {
         position: relative;
         width: 100%;
